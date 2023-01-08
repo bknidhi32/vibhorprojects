@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title> MessageBirthday Card 2</title>
+  
+  
+  <img style=" position: absolute;
+  top: 102px;
+  left: 700px;
+  width: 104px;
+  
+  border-radius: 45%;
+  background-color: beige;
+  z-index: 2" src="1 copy.jpg" alt="">
+  
+<style>
+@import url('https://fonts.googleapis.com/css?family=Dosis:800');
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi');
+
+@import url('https://fonts.googleapis.com/css?family=Overlock:900');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(35deg, hsl(340, 100%, 80%) 30%, hsl(216, 100%, 80%) 70%);
+  background-attachment: fixed;
+}
+
+.letter {
+  margin: 5% 0 0 0;
+  width: 500px;
+  height: 600px;
+  background: hsl(48, 100%, 75%);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  transform: rotate(8deg);
+}
+
+.card {
+  position: relative;
+  margin: 0;
+  padding: 40px 20px;
+  width: 500px;
+  height: 600px;
+  background: url(https://cdn.inspirationhut.net/wp-content/uploads/2014/09/cream-paper-subtle-pattern.jpg);
+  background-size: cover;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5),
+              -5px -5px 15px rgba(0, 0, 0, 0.3);
+  transform: rotate(-8deg);
+}
+
+section {
+  position: absolute;
+  margin: 35% 15%;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 30px;
+  height: 600px;
+  background: rgba(220, 20, 60, 0.7);
+  z-index: 1;
+}
+
+.knot {
+  position: absolute;
+  width: 25px;
+  height: 90px;
+  background: rgba(220, 20, 60, 0.9);
+  border-radius: 10%;
+}
+
+.knot-1 {
+  top: 5%;
+  left: 6%;
+  transform: rotate(-40deg);
+  z-index: 2;
+}
+
+.knot-2 {
+  top: 5%;
+  left: 5%;
+  transform: rotate(40deg);
+  z-index: 2;
+}
+
+.top-border {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 150px;
+  border-top: 2px solid hsl(216, 100%, 80%);
+  border-radius: 10%;
+}
+
+.right-border {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 100px;
+  border-right: 2px solid hsl(216, 100%, 80%);
+  border-radius: 10%;
+}
+
+/* =========
+    Credits
+   ========= */
+
+.credit__container-1 {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 160px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: hsl(220, 100%, 85%);
+  z-index: 1;
+}
+
+.credit__container-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  height: 32px;
+  border-radius: 0;
+  background-color: hsl(220, 100%, 85%);
+  z-index: 1;
+}
+
+  .credit__container-1:hover {
+    position: absolute;
+    bottom: 5px;
+    transition: ease 0.4s;
+  }
+
+.credits {
+  font-family: 'Baloo Thambi', cursive;
+  font-size: 1.1rem;
+  padding-left: 5px;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.image {
+  position: absolute;
+  bottom: 0px;
+  right: 0%;
+  padding: 5px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: default;
+  z-index: 2;
+}
+
+  .image:hover {
+    position: absolute;
+    bottom: 2px;
+    transition: ease 0.4s;
+  }
+
+/* ============================== */
+
+.credit__container-3 {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  width: 120px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: hsl(220, 100%, 85%);
+  z-index: 1;
+}
+
+.credit__container-4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  height: 32px;
+  border-radius: 0;
+  background-color: hsl(220, 100%, 85%);
+  z-index: 1;
+}
+
+  .credit__container-3:hover {
+    position: absolute;
+    bottom: 5px;
+    transition: ease 0.4s;
+  }
+
+.credits {
+  font-family: 'Baloo Thambi', cursive;
+  font-size: 1.1rem;
+  padding-left: 5px;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.image {
+  position: absolute;
+  bottom: 0px;
+  right: 0%;
+  padding: 5px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: default;
+  z-index: 2;
+}
+
+  .image:hover {
+    position: absolute;
+    bottom: 2px;
+    transition: ease 0.4s;
+  }
+
+
+/* ======
+    Bear
+   ====== */
+
+
+/* ===========
+    Card Text
+   =========== */
+
+.wish {
+  font-family: 'Dosis', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  color: hsl(150, 100%, 35%);
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-shadow: 3px 3px hsl(150, 100%, 80%);
+  padding-bottom: 1.2rem;
+}
+
+.quote {
+  font-family: 'Overlock', cursive;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 1.2rem;
+}
+
+h4 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);
+  opacity: 0.4;
+}
+
+.lasagna {
+  position: absolute;
+  top: -40%;
+  left: -10%;
+  transform: rotate(-30deg);
+}
+
+.meme {
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  transform: rotate(30deg);
+}
+
+.oi {
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  transform: rotate(30deg);
+}
+
+.ylyl {
+  position: absolute;
+  bottom: -14%;
+  right: -14%;
+  transform: rotate(-30deg);
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <html>
+  <head>
+    <link href="Card.css" rel="stylesheet" type="text/css">
+    <title>Message Card</title>
+  </head>
+
+  <body>
+    <div class="letter">
+      <div class="card">
+
+        <div class="ribbon"></div>
+        <div class="knot knot-1"></div>
+        <div class="knot knot-2"></div>
+
+        <div class="top-border"></div>
+        <div class="right-border"></div>
+
+        <!-- Insta Link: Shubham -->
+
+        <div class="credit__container-1">
+            <div class="credit__container-2">
+              <div class="credits">To: Rishiv</div>
+              <a href="https://www.instagram.com/shubham_das_mohapatra/" target="_blank"></a>
+            </div>
+          </div>
+
+        <!-- Insta Link: Vijay -->
+
+        <div class="credit__container-3">
+          <div class="credit__container-4">
+            <div class="credits">From: Papa</div>
+            <a href="https://www.instagram.com/vijay_tiwari_vj/" target="_blank"><</a>
+          </div>
+        </div>
+
+      
+        
+        <section>
+          <h2 class="wish">Happy Birthday Rishiv!</h2>
+          <p class="quote">May all your wishes come true today and every day.</p><!-- HTML !-->
+          <a href="messagecard2.htm"><button go class="button-36" role="button">Next:- Message Card  <br>
+            CLICK ME
+          </button></a>
+          
+        
+          <style>
+          .button-36 {
+            background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+            border-radius: 8px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            height: 4rem;
+            padding: 0 1.6rem;
+            text-align: center;
+            text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+            transition: all .5s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+          }
+          
+          .button-36:hover {
+            box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+            transition-duration: .1s;
+          }
+          
+          @media (min-width: 768px) {
+            .button-36 {
+              padding: 0 2.6rem;
+            }
+          }
+        </style>
+          <h4 class="lasagna">BDAY</h4>
+          <h4 class="meme">HI! HI! HI!</h4>
+          <h4 class="oi">fANTASTIC</h4> 
+          <h4 class="ylyl">RISHIV</h4>
+        </section>
+
+      </div>
+    </div>
+  </body>
+</html>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+</body>
+
+</html>
+ 
